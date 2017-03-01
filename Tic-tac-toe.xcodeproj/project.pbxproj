@@ -14,6 +14,9 @@
 		A69D4DEA1CE473DE00E4E9BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A69D4DE81CE473DE00E4E9BC /* LaunchScreen.storyboard */; };
 		A69D4DF21CE477DC00E4E9BC /* TTSpritesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69D4DF11CE477DC00E4E9BC /* TTSpritesFactory.swift */; };
 		A6A6F6AF1E66E62000D1BADF /* TTFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A6F6AE1E66E62000D1BADF /* TTFieldView.swift */; };
+		A6EBBCCF1E674989008CC914 /* TTGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EBBCCE1E674989008CC914 /* TTGameController.swift */; };
+		A6EBBCD11E674EB1008CC914 /* TTGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EBBCD01E674EB1008CC914 /* TTGameModel.swift */; };
+		A6EBBCD31E675480008CC914 /* TTGameAi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EBBCD21E675480008CC914 /* TTGameAi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		A69D4DEB1CE473DE00E4E9BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A69D4DF11CE477DC00E4E9BC /* TTSpritesFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTSpritesFactory.swift; sourceTree = "<group>"; };
 		A6A6F6AE1E66E62000D1BADF /* TTFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTFieldView.swift; sourceTree = "<group>"; };
+		A6EBBCCE1E674989008CC914 /* TTGameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTGameController.swift; sourceTree = "<group>"; };
+		A6EBBCD01E674EB1008CC914 /* TTGameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTGameModel.swift; sourceTree = "<group>"; };
+		A6EBBCD21E675480008CC914 /* TTGameAi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTGameAi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,9 @@
 				A69D4DF11CE477DC00E4E9BC /* TTSpritesFactory.swift */,
 				A69D4DDF1CE473DE00E4E9BC /* AppDelegate.swift */,
 				A69D4DE11CE473DE00E4E9BC /* ViewController.swift */,
+				A6EBBCCE1E674989008CC914 /* TTGameController.swift */,
+				A6EBBCD01E674EB1008CC914 /* TTGameModel.swift */,
+				A6EBBCD21E675480008CC914 /* TTGameAi.swift */,
 				A69D4DE31CE473DE00E4E9BC /* Main.storyboard */,
 				A69D4DE61CE473DE00E4E9BC /* Assets.xcassets */,
 				A69D4DE81CE473DE00E4E9BC /* LaunchScreen.storyboard */,
@@ -146,6 +155,9 @@
 				A69D4DE21CE473DE00E4E9BC /* ViewController.swift in Sources */,
 				A69D4DE01CE473DE00E4E9BC /* AppDelegate.swift in Sources */,
 				A69D4DF21CE477DC00E4E9BC /* TTSpritesFactory.swift in Sources */,
+				A6EBBCD31E675480008CC914 /* TTGameAi.swift in Sources */,
+				A6EBBCD11E674EB1008CC914 /* TTGameModel.swift in Sources */,
+				A6EBBCCF1E674989008CC914 /* TTGameController.swift in Sources */,
 				A6A6F6AF1E66E62000D1BADF /* TTFieldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
