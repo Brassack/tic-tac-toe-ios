@@ -12,6 +12,7 @@
 		A69D4DE51CE473DE00E4E9BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A69D4DE31CE473DE00E4E9BC /* Main.storyboard */; };
 		A69D4DE71CE473DE00E4E9BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A69D4DE61CE473DE00E4E9BC /* Assets.xcassets */; };
 		A69D4DEA1CE473DE00E4E9BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A69D4DE81CE473DE00E4E9BC /* LaunchScreen.storyboard */; };
+		A69D4DF21CE477DC00E4E9BC /* TTSpritesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69D4DF11CE477DC00E4E9BC /* TTSpritesFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A69D4DE61CE473DE00E4E9BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A69D4DE91CE473DE00E4E9BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A69D4DEB1CE473DE00E4E9BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A69D4DF11CE477DC00E4E9BC /* TTSpritesFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTSpritesFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		A69D4DDE1CE473DE00E4E9BC /* Tic-tac-toe */ = {
 			isa = PBXGroup;
 			children = (
+				A69D4DF11CE477DC00E4E9BC /* TTSpritesFactory.swift */,
 				A69D4DDF1CE473DE00E4E9BC /* AppDelegate.swift */,
 				A69D4DE11CE473DE00E4E9BC /* ViewController.swift */,
 				A69D4DE31CE473DE00E4E9BC /* Main.storyboard */,
@@ -90,12 +93,14 @@
 		A69D4DD41CE473DE00E4E9BC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TT;
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = dplatov;
 				TargetAttributes = {
 					A69D4DDB1CE473DE00E4E9BC = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -137,6 +142,7 @@
 			files = (
 				A69D4DE21CE473DE00E4E9BC /* ViewController.swift in Sources */,
 				A69D4DE01CE473DE00E4E9BC /* AppDelegate.swift in Sources */,
+				A69D4DF21CE477DC00E4E9BC /* TTSpritesFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +255,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Tic-tac-toe/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dplatov.Tic-tac-toe";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dmytroplatov.tic-tac-toe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -260,10 +271,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Tic-tac-toe/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dplatov.Tic-tac-toe";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dmytroplatov.tic-tac-toe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -286,6 +302,7 @@
 				A69D4DF01CE473DE00E4E9BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
