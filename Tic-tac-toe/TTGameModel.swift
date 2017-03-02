@@ -58,7 +58,7 @@ class TTGameModel: NSObject {
     }
     
     static func numberFor(_ field:[TTGameFigure]) -> Int32 {
-        print("field \(field)")
+
         var number:Int32 = 0b0
     
         for index in 0..<field.count{
@@ -78,23 +78,30 @@ class TTGameModel: NSObject {
             number = number | figureNumber
             
         }
-//        print("number after \(String(number, radix: 2))")
-         print("field decoded \(self.fieldForNumber(number))")
-
         
         return number
     }
     
     static func fieldForNumber(_ number:Int32) ->[TTGameFigure]{
     
-//        figureNumber = 0b00
         var field:[TTGameFigure] = [TTGameFigure]()
         
         for index:Int32 in 0 ..< 9{
-
+            
+            var mask:Int32 = 0b11
+            mask = mask << (index*2)
+            
+            let figureCode = (number & mask) >> (index*2)
+            
+            if(figureCode == 0b00){
+                field.append(TTGameFigure.none)
+            }else if(figureCode == 0b01){
+                field.append(TTGameFigure.x)
+            }else if(figureCode == 0b10){
+                field.append(TTGameFigure.o)
+            }            
         }
     
         return field
     }
-    
 }

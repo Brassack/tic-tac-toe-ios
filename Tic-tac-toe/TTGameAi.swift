@@ -9,5 +9,17 @@
 import UIKit
 
 class TTGameAi: NSObject {
-
+    func aiStep() -> (row:Int, column:Int) {
+        return (0 ,0)
+    }
+    
+    func stepHuman(_ step:Int, _ field:[TTGameFigure]) -> Bool {
+        
+        return true
+    }
+    
+    func stepAi(_ step:Int, _ field:[TTGameFigure]) -> Bool {
+        
+        return true
+    }
 }

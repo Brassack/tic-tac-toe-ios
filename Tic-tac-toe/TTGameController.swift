@@ -26,8 +26,9 @@ class TTGameController: NSObject {
         let fieldFigure = TTGameModel.sharedModel.figureAt(row, column)
         
         if(fieldFigure == TTGameFigure.none){
-            TTGameModel.sharedModel.put(figure: TTGameFigure.x, intoRow: row, intoColumn: column)
-            self.delegate?.draw(figure: TTGameFigure.x, atRow: row, atColumn: column)
+            
+            TTGameModel.sharedModel.put(figure: TTGameFigure.o, intoRow: row, intoColumn: column)
+            self.delegate?.draw(figure: TTGameFigure.o, atRow: row, atColumn: column)
             
             switch TTGameModel.sharedModel.currentState() {
                 case .win:

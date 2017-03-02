@@ -44,7 +44,7 @@ class ViewController: UIViewController, TTGameViewProtocol {
     }
 
     @IBAction func fieldTap(_ sender: UITapGestureRecognizer) {
-        TTGameModel.numberFor(TTGameModel.sharedModel.field)
+
         if sender.state == UIGestureRecognizerState.ended {
             let tapLocation = sender.location(in: sender.view)
             
