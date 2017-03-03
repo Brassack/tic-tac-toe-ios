@@ -88,7 +88,7 @@ class ViewController: UIViewController, TTGameViewProtocol {
         
         let fps = 20
         
-        let imageCell = imageCells[TTGameModel.indexFor(row: row, column: column)]
+        let imageCell = imageCells[TTGameModel.indexFor(row, column)]
         
         imageCell.animationDuration = TimeInterval(xSprites.count)/TimeInterval(fps)
         imageCell.animationRepeatCount = 1
