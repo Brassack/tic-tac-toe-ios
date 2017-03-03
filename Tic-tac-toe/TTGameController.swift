@@ -27,8 +27,8 @@ class TTGameController: NSObject {
         
         if(fieldFigure == TTGameFigure.none){
             
-            TTGameModel.sharedModel.put(figure: TTGameFigure.o, intoRow: row, intoColumn: column)
-            self.delegate?.draw(figure: TTGameFigure.o, atRow: row, atColumn: column)
+            TTGameModel.sharedModel.put(figure: TTGameFigure.x, intoRow: row, intoColumn: column)
+            self.delegate?.draw(figure: TTGameFigure.x, atRow: row, atColumn: column)
             
             switch TTGameModel.sharedModel.currentState() {
                 case .win:
@@ -44,6 +44,12 @@ class TTGameController: NSObject {
                     self.delegate?.showDraw()
                 
                 case .game:
+                    
+                    let aiCell:(row:Int, column:Int) = TTGameAI.sharedAI.aiDecision()
+                    
+                    TTGameModel.sharedModel.put(figure: TTGameFigure.o, intoRow: aiCell.row, intoColumn:aiCell.column)
+                    self.delegate?.draw(figure: TTGameFigure.o, atRow: aiCell.row, atColumn: aiCell.column)
+                    
                     break
             }
         }

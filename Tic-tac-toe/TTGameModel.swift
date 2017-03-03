@@ -43,15 +43,15 @@ class TTGameModel: NSObject {
     }
     
     func currentState() -> TTGameState {
-        return self.state(forField:self.field)
+        return TTGameModel.state(forField:field)
     }
     
-    func state(forField field: [TTGameFigure]) -> TTGameState {
+    static func state(forField field: [TTGameFigure]) -> TTGameState {
         
         /*---
           -×-
           --- */
-        var testingElement = field[TTGameModel.indexFor(2,2)]
+        var testingElement = field[TTGameModel.indexFor(1,1)]
         
         func result() -> TTGameState{
             if(testingElement == TTGameFigure.o){
@@ -97,14 +97,14 @@ class TTGameModel: NSObject {
         /*-×-
           ---
           --- */
-        testingElement = field[TTGameModel.indexFor(2,2)]
+        testingElement = field[TTGameModel.indexFor(0,1)]
         
         if(testingElement != TTGameFigure.none){
             /*?×?
               ---
               --- */
             if(field.first == testingElement
-                && field[TTGameModel.indexFor(0,1)] == testingElement){
+                && field[TTGameModel.indexFor(0,2)] == testingElement){
                 return result()
             }
         }
@@ -132,7 +132,7 @@ class TTGameModel: NSObject {
         /*---
           --×
           --- */
-        testingElement = field[TTGameModel.indexFor(1,0)]
+        testingElement = field[TTGameModel.indexFor(1,2)]
         
         if(testingElement != TTGameFigure.none){
             /*--?
@@ -151,7 +151,7 @@ class TTGameModel: NSObject {
         /*---
           ---
           -×- */
-        testingElement = field[TTGameModel.indexFor(1,0)]
+        testingElement = field[TTGameModel.indexFor(2,1)]
         
         if(testingElement != TTGameFigure.none){
             /*---
@@ -168,7 +168,7 @@ class TTGameModel: NSObject {
         }
         
         
-        if(field.index(of:TTGameFigure.none) == NSNotFound){
+        if(field.index(of:TTGameFigure.none) == nil){
             return TTGameState.draw
         }
         
