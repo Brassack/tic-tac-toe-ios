@@ -63,7 +63,7 @@ class ViewController: UIViewController, TTGameViewProtocol {
             TTGameController.sharedController.resetGame()
         }))
         
-        alert.show(self, sender: self)
+        self.present(alert, animated: true, completion: nil)
     }
     
     func showWin(){

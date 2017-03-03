@@ -50,6 +50,16 @@ class TTGameController: NSObject {
                     TTGameModel.sharedModel.put(figure: TTGameFigure.o, intoRow: aiCell.row, intoColumn:aiCell.column)
                     self.delegate?.draw(figure: TTGameFigure.o, atRow: aiCell.row, atColumn: aiCell.column)
                     
+                    switch TTGameModel.sharedModel.currentState(){
+                        case.loose:
+                            self.delegate?.showLoose()
+                        case.draw:
+                            self.delegate?.showDraw()
+                        default:
+                            break
+                    }
+                    
+                    
                     break
             }
         }
