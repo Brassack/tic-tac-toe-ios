@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32065E282194C97100A29263 /* TTGameFieldIndexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32065E272194C97100A29263 /* TTGameFieldIndexConverter.swift */; };
+		32065E2A2194C98600A29263 /* TTGameFileldConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32065E292194C98600A29263 /* TTGameFileldConverter.swift */; };
+		32065E2C2194C9B200A29263 /* TTGameModel+NestedTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32065E2B2194C9B200A29263 /* TTGameModel+NestedTypes.swift */; };
 		A69D4DE01CE473DE00E4E9BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69D4DDF1CE473DE00E4E9BC /* AppDelegate.swift */; };
 		A69D4DE21CE473DE00E4E9BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69D4DE11CE473DE00E4E9BC /* ViewController.swift */; };
 		A69D4DE51CE473DE00E4E9BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A69D4DE31CE473DE00E4E9BC /* Main.storyboard */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32065E272194C97100A29263 /* TTGameFieldIndexConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTGameFieldIndexConverter.swift; sourceTree = "<group>"; };
+		32065E292194C98600A29263 /* TTGameFileldConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTGameFileldConverter.swift; sourceTree = "<group>"; };
+		32065E2B2194C9B200A29263 /* TTGameModel+NestedTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TTGameModel+NestedTypes.swift"; sourceTree = "<group>"; };
 		A69D4DDC1CE473DE00E4E9BC /* Tic-tac-toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic-tac-toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69D4DDF1CE473DE00E4E9BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A69D4DE11CE473DE00E4E9BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +51,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32065E262194BEBE00A29263 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A6EBBCD21E675480008CC914 /* TTGameAi.swift */,
+				A6EBBCD01E674EB1008CC914 /* TTGameModel.swift */,
+				32065E2B2194C9B200A29263 /* TTGameModel+NestedTypes.swift */,
+				A6EBBCCE1E674989008CC914 /* TTGameController.swift */,
+				32065E272194C97100A29263 /* TTGameFieldIndexConverter.swift */,
+				32065E292194C98600A29263 /* TTGameFileldConverter.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A69D4DD31CE473DE00E4E9BC = {
 			isa = PBXGroup;
 			children = (
@@ -64,13 +83,11 @@
 		A69D4DDE1CE473DE00E4E9BC /* Tic-tac-toe */ = {
 			isa = PBXGroup;
 			children = (
+				32065E262194BEBE00A29263 /* Model */,
 				A6A6F6AE1E66E62000D1BADF /* TTFieldView.swift */,
 				A69D4DF11CE477DC00E4E9BC /* TTSpritesFactory.swift */,
 				A69D4DDF1CE473DE00E4E9BC /* AppDelegate.swift */,
 				A69D4DE11CE473DE00E4E9BC /* ViewController.swift */,
-				A6EBBCCE1E674989008CC914 /* TTGameController.swift */,
-				A6EBBCD01E674EB1008CC914 /* TTGameModel.swift */,
-				A6EBBCD21E675480008CC914 /* TTGameAi.swift */,
 				A69D4DE31CE473DE00E4E9BC /* Main.storyboard */,
 				A69D4DE61CE473DE00E4E9BC /* Assets.xcassets */,
 				A69D4DE81CE473DE00E4E9BC /* LaunchScreen.storyboard */,
@@ -152,10 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32065E2A2194C98600A29263 /* TTGameFileldConverter.swift in Sources */,
+				32065E282194C97100A29263 /* TTGameFieldIndexConverter.swift in Sources */,
 				A69D4DE21CE473DE00E4E9BC /* ViewController.swift in Sources */,
 				A69D4DE01CE473DE00E4E9BC /* AppDelegate.swift in Sources */,
 				A69D4DF21CE477DC00E4E9BC /* TTSpritesFactory.swift in Sources */,
 				A6EBBCD31E675480008CC914 /* TTGameAi.swift in Sources */,
+				32065E2C2194C9B200A29263 /* TTGameModel+NestedTypes.swift in Sources */,
 				A6EBBCD11E674EB1008CC914 /* TTGameModel.swift in Sources */,
 				A6EBBCCF1E674989008CC914 /* TTGameController.swift in Sources */,
 				A6A6F6AF1E66E62000D1BADF /* TTFieldView.swift in Sources */,

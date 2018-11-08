@@ -10,11 +10,12 @@ import UIKit
 
 @IBDesignable
 class TTFieldView: UIView {
+    
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
         let offset = rect.size.width/15
-        let lineWidth:CGFloat = 0.3
+        let lineWidth: CGFloat = 0.3
         let lineColour = UIColor(white: 0.5, alpha: 1)
         
         let sectionWidht = rect.size.width/3
