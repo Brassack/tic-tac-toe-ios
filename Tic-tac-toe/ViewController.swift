@@ -45,7 +45,7 @@ class ViewController: UIViewController, TTGameViewProtocol {
 
     @IBAction func fieldTap(_ sender: UITapGestureRecognizer) {
 
-        if sender.state == UIGestureRecognizerState.ended {
+        if sender.state == UIGestureRecognizer.State.ended {
             let tapLocation = sender.location(in: sender.view)
             
             let row = Int(tapLocation.y)/Int((sender.view?.frame.size.width)!/3)
@@ -59,7 +59,7 @@ class ViewController: UIViewController, TTGameViewProtocol {
     func showEnding(_ text:String) {
         let alert = UIAlertController(title: "Game ended", message: text, preferredStyle: .alert)
     
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { action in
             TTGameController.sharedController.resetGame()
         }))
         
