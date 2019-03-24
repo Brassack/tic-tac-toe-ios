@@ -6,15 +6,16 @@
 //  Copyright © 2018 dplatov. All rights reserved.
 //
 
-extension TTGameModel {
+public extension TTGameModel {
     
-    enum TTGameFigure {
-        case none
-        case x
-        case o
+    enum Figure: String {
+        case none = "-"
+        case x = "x"
+        case o = "o"
+        
     }
     
-    enum TTGameState {
+    enum State {
         case game
         case win
         case loose

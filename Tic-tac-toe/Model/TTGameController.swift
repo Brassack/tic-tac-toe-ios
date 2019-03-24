@@ -15,7 +15,7 @@ protocol TTGameViewProtocol: class {
     func showLoose()
     func showDraw()
     func cleanView()
-    func draw(figure: TTGameModel.TTGameFigure, atRow row: Int, atColumn column: Int)
+    func draw(figure: TTGameModel.Figure, atRow row: Int, atColumn column: Int)
 }
 
 class TTGameController {
@@ -33,7 +33,7 @@ class TTGameController {
         
         if fieldFigure == .none {
             
-            model.put(figure: .x, intoRow: row, column: column)
+            model.put(.x, intoRow: row, column: column)
             delegate?.draw(figure: .x, atRow: row, atColumn: column)
             
             switch model.state {
@@ -50,7 +50,7 @@ class TTGameController {
                     
                     let aiCell: (row: Int, column: Int) = ai.bestMove(for: model)
                     
-                    model.put(figure: .o, intoRow: aiCell.row, column:aiCell.column)
+                    model.put(.o, intoRow: aiCell.row, column:aiCell.column)
                     delegate?.draw(figure: .o, atRow: aiCell.row, atColumn: aiCell.column)
                     
                     switch model.state{

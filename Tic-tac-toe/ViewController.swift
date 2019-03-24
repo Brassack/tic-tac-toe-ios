@@ -15,6 +15,10 @@ class ViewController: UIViewController, TTGameViewProtocol {
     var xSprites: [UIImage] = [UIImage]()
     var oSprites: [UIImage] = [UIImage]()
     
+    var indexConverter = TTGameFieldIndexConverter()
+    
+    var gameController = TTGameController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,7 +34,7 @@ class ViewController: UIViewController, TTGameViewProtocol {
             xSprites.append(sprites[index])
         }
         
-        TTGameController.main.delegate = self
+        gameController.delegate = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -51,7 +55,7 @@ class ViewController: UIViewController, TTGameViewProtocol {
             let row = Int(tapLocation.y)/Int((sender.view?.frame.size.width)!/3)
             let column = Int(tapLocation.x)/Int((sender.view?.frame.size.height)!/3)
             
-            TTGameController.main.userTapOnField(onRow: row, onColumn: column)
+            gameController.userTapOnField(onRow: row, onColumn: column)
 
         }
     }
@@ -59,8 +63,8 @@ class ViewController: UIViewController, TTGameViewProtocol {
     func showEnding(_ text:String) {
         let alert = UIAlertController(title: "Game ended", message: text, preferredStyle: .alert)
     
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { action in
-            TTGameController.main.reset()
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {[weak self] action in
+            self?.gameController.reset()
         }))
         
         self.present(alert, animated: true, completion: nil)
@@ -84,11 +88,11 @@ class ViewController: UIViewController, TTGameViewProtocol {
         }
     }
     
-    func draw(figure: TTGameModel.TTGameFigure, atRow row: Int, atColumn column: Int){
+    func draw(figure: TTGameModel.Figure, atRow row: Int, atColumn column: Int){
         
         let fps = 20
         
-        let imageCell = imageCells[TTGameFieldIndexConverter.indexFor(row, column)]
+        let imageCell = imageCells[indexConverter.indexFor(row, column)]
         
         imageCell.animationDuration = TimeInterval(xSprites.count)/TimeInterval(fps)
         imageCell.animationRepeatCount = 1

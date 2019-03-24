@@ -6,13 +6,15 @@
 //  Copyright © 2018 dplatov. All rights reserved.
 //
 
-struct TTGameFieldIndexConverter {
+public struct TTGameFieldIndexConverter {
     
-    static func indexFor(_ row: Int, _ column: Int) -> Int{
+    public init(){}
+    
+    func indexFor(_ row: Int, _ column: Int) -> Int{
         return 3*row + column
     }
     
-    static func rowAndColumnFor(index: Int) -> (row: Int, column: Int){
+    func rowAndColumnFor(index: Int) -> (row: Int, column: Int){
         let row = index/3
         let column = index - row*3
         

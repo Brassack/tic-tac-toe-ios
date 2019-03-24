@@ -6,34 +6,42 @@
 //  Copyright © 2018 dplatov. All rights reserved.
 //
 
-struct TTGameFileldConverter {
+public struct TTGameFileldConverter {
     
-    static func field(from number: Int32) -> [TTGameModel.TTGameFigure] {
+    var indexConverter = TTGameFieldIndexConverter()
+    public init(){}
+    
+    public func model(from number: Int32) -> TTGameModel {
+        var model = TTGameModel()
         
-        var field: [TTGameModel.TTGameFigure] = [TTGameModel.TTGameFigure](repeating: .none, count: 9)
-        for index: Int32 in 0 ..< 9{
+        for offset: Int32 in 0 ..< 9 {
             
-            let mask: Int32 = 0b11 << (index*2)
+            let mask: Int32 = 0b11 << (offset*2)
             
-            let figureCode = (number & mask) >> (index*2)
+            let figureCode = (number & mask) >> (offset*2)
             
+            let index = Int(offset)
             if(figureCode == 0b00){
-    
-                field.append(.none)
+                
+                let position = indexConverter.rowAndColumnFor(index: index)
+                model.put(.none, intoRow: position.row, column: position.column)
             }else if(figureCode == 0b01){
-    
-                field.append(.x)
+                
+                let position = indexConverter.rowAndColumnFor(index: index)
+                model.put(.x, intoRow: position.row, column: position.column)
             }else if(figureCode == 0b10){
-    
-                field.append(.o)
+                
+                let position = indexConverter.rowAndColumnFor(index: index)
+                model.put(.o, intoRow: position.row, column: position.column)
             }
         }
         
-        return field
+        return model
     }
     
-    static func number(from field: [TTGameModel.TTGameFigure]) -> Int32 {
+    public func number(from model: TTGameModel) -> Int32 {
         
+        let field = model.field
         var number: Int32 = 0b0
         
         for index in 0..<field.count{

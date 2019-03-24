@@ -10,7 +10,8 @@ import UIKit
 
 class TTGameAI {
     
-    static let maxDeep = 3
+    var maxDeep = 3
+    var indexConverter = TTGameFieldIndexConverter()
     
     func bestMove(for model: TTGameModel) -> (row:Int, column:Int) {
         
@@ -21,7 +22,7 @@ class TTGameAI {
                 testModel.field[index] = .o;
                 
                 if testModel.state == .loose {
-                    return TTGameFieldIndexConverter.rowAndColumnFor(index: index)
+                    return indexConverter.rowAndColumnFor(index: index)
                 }
             }
         }
@@ -34,17 +35,17 @@ class TTGameAI {
                 testModel.field[index] = .o;
             
                 if stepAI(0, testModel) {
-                    return TTGameFieldIndexConverter.rowAndColumnFor(index: index)
+                    return indexConverter.rowAndColumnFor(index: index)
                 }
             }
         }
 
-        return TTGameFieldIndexConverter.rowAndColumnFor(index: model.field.index(of:.none)!)
+        return indexConverter.rowAndColumnFor(index: model.field.index(of:.none)!)
     }
     
     func stepHuman(_ step: Int, _ aiModel: TTGameModel) -> Bool {
         
-        if (step < TTGameAI.maxDeep) {
+        if (step < maxDeep) {
         
             for index in 0..<aiModel.field.count {
             

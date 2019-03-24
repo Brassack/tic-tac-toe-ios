@@ -6,35 +6,46 @@
 //  Copyright © 2017 dplatov. All rights reserved.
 //
 
-import UIKit
 
-
-struct TTGameModel {
+public struct TTGameModel {
     
-    var field: [TTGameFigure] = [TTGameFigure](repeating: .none, count: 9)
+    var indexConverter = TTGameFieldIndexConverter()
+    var field: [Figure] = [Figure](repeating: .none, count: 9)
+    
+    public init(){}
     
     mutating func reset() {
-        field = [TTGameFigure](repeating: .none, count: field.count)
+        field = [Figure](repeating: .none, count: field.count)
     }
     
-    mutating func put(figure: TTGameFigure, intoRow row: Int, column: Int) {
-        field[TTGameFieldIndexConverter.indexFor(row, column)] = figure
+    public mutating func put(_ figure: Figure, intoRow row: Int, column: Int) {
+        field[indexConverter.indexFor(row, column)] = figure
     }
     
-    func figure(atRow row: Int, column: Int) -> TTGameFigure {
-        return field[TTGameFieldIndexConverter.indexFor(row, column)]
+    public func figure(atRow row: Int, column: Int) -> Figure {
+        return field[indexConverter.indexFor(row, column)]
     }
     
-    var state: TTGameState {
+    public var description: String {
+        get{
+            print("description")
+            return "\n┌───┐\n"
+                + "│\(field[0].rawValue)\(field[1].rawValue)\(field[2].rawValue)│\n"
+                + "│\(field[3].rawValue)\(field[4].rawValue)\(field[5].rawValue)│\n"
+                + "│\(field[6].rawValue)\(field[7].rawValue)\(field[8].rawValue)│\n"
+                + "└───┘"
+        }
+    }
+    public var state: State {
         get {
             
             /*---
              -×-
              --- */
-            var testingElement = field[TTGameFieldIndexConverter.indexFor(1, 1)]
+            var testingElement = field[indexConverter.indexFor(1, 1)]
             
-            func result() -> TTGameState {
-                if(testingElement == TTGameFigure.o){
+            func result() -> State {
+                if(testingElement == Figure.o){
                     return .loose
                 }else{
                     return .win
@@ -53,23 +64,23 @@ struct TTGameModel {
                 /*-?-
                  -×-
                  -?- */
-                if(field[TTGameFieldIndexConverter.indexFor(0, 1)] == testingElement
-                    && field[TTGameFieldIndexConverter.indexFor(2, 1)] == testingElement){
+                if(field[indexConverter.indexFor(0, 1)] == testingElement
+                    && field[indexConverter.indexFor(2, 1)] == testingElement){
                     return result()
                 }
                 /*--?
                  -×-
                  ?-- */
-                if(field[TTGameFieldIndexConverter.indexFor(0, 2)] == testingElement
-                    && field[TTGameFieldIndexConverter.indexFor(2, 0)] == testingElement){
+                if(field[indexConverter.indexFor(0, 2)] == testingElement
+                    && field[indexConverter.indexFor(2, 0)] == testingElement){
                     return result()
                 }
                 
                 /*---
                  ?×?
                  --- */
-                if(field[TTGameFieldIndexConverter.indexFor(1, 0)] == testingElement
-                    && field[TTGameFieldIndexConverter.indexFor(1, 2)] == testingElement){
+                if(field[indexConverter.indexFor(1, 0)] == testingElement
+                    && field[indexConverter.indexFor(1, 2)] == testingElement){
                     return result()
                 }
             }
@@ -77,14 +88,14 @@ struct TTGameModel {
             /*-×-
              ---
              --- */
-            testingElement = field[TTGameFieldIndexConverter.indexFor(0, 1)]
+            testingElement = field[indexConverter.indexFor(0, 1)]
             
             if(testingElement != .none){
                 /*?×?
                  ---
                  --- */
                 if(field.first == testingElement
-                    && field[TTGameFieldIndexConverter.indexFor(0, 2)] == testingElement){
+                    && field[indexConverter.indexFor(0, 2)] == testingElement){
                     return result()
                 }
             }
@@ -92,14 +103,14 @@ struct TTGameModel {
             /*---
              ×--
              --- */
-            testingElement = field[TTGameFieldIndexConverter.indexFor(1, 0)]
+            testingElement = field[indexConverter.indexFor(1, 0)]
             
             if(testingElement != .none){
                 /*?--
                  ×--
                  ?-- */
                 if(field.first == testingElement
-                    && field[TTGameFieldIndexConverter.indexFor(2, 0)] == testingElement){
+                    && field[indexConverter.indexFor(2, 0)] == testingElement){
                     return result()
                 }
                 
@@ -112,13 +123,13 @@ struct TTGameModel {
             /*---
              --×
              --- */
-            testingElement = field[TTGameFieldIndexConverter.indexFor(1, 2)]
+            testingElement = field[indexConverter.indexFor(1, 2)]
             
             if(testingElement != .none){
                 /*--?
                  --×
                  --? */
-                if(field[TTGameFieldIndexConverter.indexFor(0, 2)] == testingElement
+                if(field[indexConverter.indexFor(0, 2)] == testingElement
                     && field.last == testingElement){
                     return result()
                 }
@@ -131,13 +142,13 @@ struct TTGameModel {
             /*---
              ---
              -×- */
-            testingElement = field[TTGameFieldIndexConverter.indexFor(2, 1)]
+            testingElement = field[indexConverter.indexFor(2, 1)]
             
             if(testingElement != .none){
                 /*---
                  ---
                  ?×? */
-                if(field[TTGameFieldIndexConverter.indexFor(2, 0)] == testingElement
+                if(field[indexConverter.indexFor(2, 0)] == testingElement
                     && field.last == testingElement){
                     return result()
                 }
