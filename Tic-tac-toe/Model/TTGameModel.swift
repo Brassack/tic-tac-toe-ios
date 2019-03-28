@@ -10,7 +10,7 @@
 public struct TTGameModel {
     
     var indexConverter = TTGameFieldIndexConverter()
-    var field: [Figure] = [Figure](repeating: .none, count: 9)
+    public var field: [Figure] = [Figure](repeating: .none, count: 9)
     
     public init(){}
     
@@ -28,7 +28,6 @@ public struct TTGameModel {
     
     public var description: String {
         get{
-            print("description")
             return "\n┌───┐\n"
                 + "│\(field[0].rawValue)\(field[1].rawValue)\(field[2].rawValue)│\n"
                 + "│\(field[3].rawValue)\(field[4].rawValue)\(field[5].rawValue)│\n"

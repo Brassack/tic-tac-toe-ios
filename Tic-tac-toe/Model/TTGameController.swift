@@ -25,7 +25,7 @@ class TTGameController {
     weak var delegate: TTGameViewProtocol?
     
     var model = TTGameModel()
-    var ai = TTGameAI()
+    var ai: TTGameAI = TTMLPoweredGameAI()//TTCalculationGameAI()//TTGameAI()
     
     func userTapOnField(onRow row: Int, onColumn column: Int) {
         

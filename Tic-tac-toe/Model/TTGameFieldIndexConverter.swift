@@ -10,11 +10,11 @@ public struct TTGameFieldIndexConverter {
     
     public init(){}
     
-    func indexFor(_ row: Int, _ column: Int) -> Int{
+    public func indexFor(_ row: Int, _ column: Int) -> Int{
         return 3*row + column
     }
     
-    func rowAndColumnFor(index: Int) -> (row: Int, column: Int){
+    public func rowAndColumnFor(index: Int) -> (row: Int, column: Int){
         let row = index/3
         let column = index - row*3
         

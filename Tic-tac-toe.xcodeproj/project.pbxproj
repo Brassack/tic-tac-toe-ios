@@ -7,9 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32065E282194C97100A29263 /* TTGameFieldIndexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32065E272194C97100A29263 /* TTGameFieldIndexConverter.swift */; };
-		32065E2A2194C98600A29263 /* TTGameFileldConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32065E292194C98600A29263 /* TTGameFileldConverter.swift */; };
 		32065E2C2194C9B200A29263 /* TTGameModel+NestedTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32065E2B2194C9B200A29263 /* TTGameModel+NestedTypes.swift */; };
+		3249ADE82247A308006BC44B /* MLStepCostPredictor.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3249ADE72247A308006BC44B /* MLStepCostPredictor.mlmodel */; };
+		32506CFB224547B5006C76E7 /* ModelBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 32506CF9224547B5006C76E7 /* ModelBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32506CFF224547C1006C76E7 /* TTGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EBBCD01E674EB1008CC914 /* TTGameModel.swift */; };
+		32506D00224547C1006C76E7 /* TTGameModel+NestedTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32065E2B2194C9B200A29263 /* TTGameModel+NestedTypes.swift */; };
+		32506D01224547C1006C76E7 /* TTGameFieldIndexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274D6F622453B990035C09C /* TTGameFieldIndexConverter.swift */; };
+		32506D02224547C1006C76E7 /* TTGameFileldConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274D6F522453B990035C09C /* TTGameFileldConverter.swift */; };
+		3274D6F722453B9A0035C09C /* TTGameFileldConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274D6F522453B990035C09C /* TTGameFileldConverter.swift */; };
+		3274D6F822453B9A0035C09C /* TTGameFieldIndexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274D6F622453B990035C09C /* TTGameFieldIndexConverter.swift */; };
+		329D540D224B79B600FFAB67 /* TTCalculationGameAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329D540C224B79B600FFAB67 /* TTCalculationGameAI.swift */; };
+		329D540F224B7B1A00FFAB67 /* TTGameStepResultCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329D540E224B7B1A00FFAB67 /* TTGameStepResultCalculator.swift */; };
+		329D5412224B7EC600FFAB67 /* TTGameAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329D5411224B7EC600FFAB67 /* TTGameAI.swift */; };
+		32BD40EA224B9F99003B8198 /* TTGameStepResultCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329D540E224B7B1A00FFAB67 /* TTGameStepResultCalculator.swift */; };
 		A69D4DE01CE473DE00E4E9BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69D4DDF1CE473DE00E4E9BC /* AppDelegate.swift */; };
 		A69D4DE21CE473DE00E4E9BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69D4DE11CE473DE00E4E9BC /* ViewController.swift */; };
 		A69D4DE51CE473DE00E4E9BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A69D4DE31CE473DE00E4E9BC /* Main.storyboard */; };
@@ -19,13 +29,20 @@
 		A6A6F6AF1E66E62000D1BADF /* TTFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A6F6AE1E66E62000D1BADF /* TTFieldView.swift */; };
 		A6EBBCCF1E674989008CC914 /* TTGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EBBCCE1E674989008CC914 /* TTGameController.swift */; };
 		A6EBBCD11E674EB1008CC914 /* TTGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EBBCD01E674EB1008CC914 /* TTGameModel.swift */; };
-		A6EBBCD31E675480008CC914 /* TTGameAi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EBBCD21E675480008CC914 /* TTGameAi.swift */; };
+		A6EBBCD31E675480008CC914 /* TTMLPoweredGameAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EBBCD21E675480008CC914 /* TTMLPoweredGameAI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		32065E272194C97100A29263 /* TTGameFieldIndexConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTGameFieldIndexConverter.swift; sourceTree = "<group>"; };
-		32065E292194C98600A29263 /* TTGameFileldConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTGameFileldConverter.swift; sourceTree = "<group>"; };
 		32065E2B2194C9B200A29263 /* TTGameModel+NestedTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TTGameModel+NestedTypes.swift"; sourceTree = "<group>"; };
+		3249ADE72247A308006BC44B /* MLStepCostPredictor.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MLStepCostPredictor.mlmodel; sourceTree = "<group>"; };
+		32506CF7224547B5006C76E7 /* ModelBridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ModelBridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32506CF9224547B5006C76E7 /* ModelBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelBridge.h; sourceTree = "<group>"; };
+		32506CFA224547B5006C76E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3274D6F522453B990035C09C /* TTGameFileldConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTGameFileldConverter.swift; sourceTree = "<group>"; };
+		3274D6F622453B990035C09C /* TTGameFieldIndexConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTGameFieldIndexConverter.swift; sourceTree = "<group>"; };
+		329D540C224B79B600FFAB67 /* TTCalculationGameAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTCalculationGameAI.swift; sourceTree = "<group>"; };
+		329D540E224B7B1A00FFAB67 /* TTGameStepResultCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTGameStepResultCalculator.swift; sourceTree = "<group>"; };
+		329D5411224B7EC600FFAB67 /* TTGameAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTGameAI.swift; sourceTree = "<group>"; };
 		A69D4DDC1CE473DE00E4E9BC /* Tic-tac-toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic-tac-toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69D4DDF1CE473DE00E4E9BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A69D4DE11CE473DE00E4E9BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,10 +54,17 @@
 		A6A6F6AE1E66E62000D1BADF /* TTFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTFieldView.swift; sourceTree = "<group>"; };
 		A6EBBCCE1E674989008CC914 /* TTGameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTGameController.swift; sourceTree = "<group>"; };
 		A6EBBCD01E674EB1008CC914 /* TTGameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTGameModel.swift; sourceTree = "<group>"; };
-		A6EBBCD21E675480008CC914 /* TTGameAi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTGameAi.swift; sourceTree = "<group>"; };
+		A6EBBCD21E675480008CC914 /* TTMLPoweredGameAI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTMLPoweredGameAI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		32506CF4224547B5006C76E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A69D4DD91CE473DE00E4E9BC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,20 +78,42 @@
 		32065E262194BEBE00A29263 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A6EBBCD21E675480008CC914 /* TTGameAi.swift */,
+				329D5413224B7EE700FFAB67 /* AI */,
 				A6EBBCD01E674EB1008CC914 /* TTGameModel.swift */,
 				32065E2B2194C9B200A29263 /* TTGameModel+NestedTypes.swift */,
 				A6EBBCCE1E674989008CC914 /* TTGameController.swift */,
-				32065E272194C97100A29263 /* TTGameFieldIndexConverter.swift */,
-				32065E292194C98600A29263 /* TTGameFileldConverter.swift */,
+				3274D6F622453B990035C09C /* TTGameFieldIndexConverter.swift */,
+				3274D6F522453B990035C09C /* TTGameFileldConverter.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		32506CF8224547B5006C76E7 /* ModelBridge */ = {
+			isa = PBXGroup;
+			children = (
+				32506CF9224547B5006C76E7 /* ModelBridge.h */,
+				32506CFA224547B5006C76E7 /* Info.plist */,
+			);
+			path = ModelBridge;
+			sourceTree = "<group>";
+		};
+		329D5413224B7EE700FFAB67 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				329D5411224B7EC600FFAB67 /* TTGameAI.swift */,
+				3249ADE72247A308006BC44B /* MLStepCostPredictor.mlmodel */,
+				A6EBBCD21E675480008CC914 /* TTMLPoweredGameAI.swift */,
+				329D540C224B79B600FFAB67 /* TTCalculationGameAI.swift */,
+				329D540E224B7B1A00FFAB67 /* TTGameStepResultCalculator.swift */,
+			);
+			path = AI;
 			sourceTree = "<group>";
 		};
 		A69D4DD31CE473DE00E4E9BC = {
 			isa = PBXGroup;
 			children = (
 				A69D4DDE1CE473DE00E4E9BC /* Tic-tac-toe */,
+				32506CF8224547B5006C76E7 /* ModelBridge */,
 				A69D4DDD1CE473DE00E4E9BC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				A69D4DDC1CE473DE00E4E9BC /* Tic-tac-toe.app */,
+				32506CF7224547B5006C76E7 /* ModelBridge.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,7 +145,36 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		32506CF2224547B5006C76E7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32506CFB224547B5006C76E7 /* ModelBridge.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		32506CF6224547B5006C76E7 /* ModelBridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32506CFC224547B5006C76E7 /* Build configuration list for PBXNativeTarget "ModelBridge" */;
+			buildPhases = (
+				32506CF2224547B5006C76E7 /* Headers */,
+				32506CF3224547B5006C76E7 /* Sources */,
+				32506CF4224547B5006C76E7 /* Frameworks */,
+				32506CF5224547B5006C76E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ModelBridge;
+			productName = ModelBridge;
+			productReference = 32506CF7224547B5006C76E7 /* ModelBridge.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		A69D4DDB1CE473DE00E4E9BC /* Tic-tac-toe */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A69D4DEE1CE473DE00E4E9BC /* Build configuration list for PBXNativeTarget "Tic-tac-toe" */;
@@ -127,8 +203,14 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = dplatov;
 				TargetAttributes = {
+					32506CF6224547B5006C76E7 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = TR2QW27HUU;
+						ProvisioningStyle = Automatic;
+					};
 					A69D4DDB1CE473DE00E4E9BC = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = TR2QW27HUU;
 						LastSwiftMigration = 0820;
 					};
 				};
@@ -147,11 +229,19 @@
 			projectRoot = "";
 			targets = (
 				A69D4DDB1CE473DE00E4E9BC /* Tic-tac-toe */,
+				32506CF6224547B5006C76E7 /* ModelBridge */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		32506CF5224547B5006C76E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A69D4DDA1CE473DE00E4E9BC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -165,20 +255,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		32506CF3224547B5006C76E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32BD40EA224B9F99003B8198 /* TTGameStepResultCalculator.swift in Sources */,
+				32506D02224547C1006C76E7 /* TTGameFileldConverter.swift in Sources */,
+				32506D01224547C1006C76E7 /* TTGameFieldIndexConverter.swift in Sources */,
+				32506D00224547C1006C76E7 /* TTGameModel+NestedTypes.swift in Sources */,
+				32506CFF224547C1006C76E7 /* TTGameModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A69D4DD81CE473DE00E4E9BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32065E2A2194C98600A29263 /* TTGameFileldConverter.swift in Sources */,
-				32065E282194C97100A29263 /* TTGameFieldIndexConverter.swift in Sources */,
+				3274D6F722453B9A0035C09C /* TTGameFileldConverter.swift in Sources */,
 				A69D4DE21CE473DE00E4E9BC /* ViewController.swift in Sources */,
 				A69D4DE01CE473DE00E4E9BC /* AppDelegate.swift in Sources */,
 				A69D4DF21CE477DC00E4E9BC /* TTSpritesFactory.swift in Sources */,
-				A6EBBCD31E675480008CC914 /* TTGameAi.swift in Sources */,
+				3249ADE82247A308006BC44B /* MLStepCostPredictor.mlmodel in Sources */,
+				A6EBBCD31E675480008CC914 /* TTMLPoweredGameAI.swift in Sources */,
 				32065E2C2194C9B200A29263 /* TTGameModel+NestedTypes.swift in Sources */,
 				A6EBBCD11E674EB1008CC914 /* TTGameModel.swift in Sources */,
+				329D540F224B7B1A00FFAB67 /* TTGameStepResultCalculator.swift in Sources */,
+				329D5412224B7EC600FFAB67 /* TTGameAI.swift in Sources */,
 				A6EBBCCF1E674989008CC914 /* TTGameController.swift in Sources */,
+				3274D6F822453B9A0035C09C /* TTGameFieldIndexConverter.swift in Sources */,
 				A6A6F6AF1E66E62000D1BADF /* TTFieldView.swift in Sources */,
+				329D540D224B79B600FFAB67 /* TTCalculationGameAI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +310,74 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		32506CFD224547B5006C76E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TR2QW27HUU;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ModelBridge/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = dplatov.ModelBridge;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		32506CFE224547B5006C76E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TR2QW27HUU;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ModelBridge/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = dplatov.ModelBridge;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		A69D4DEC1CE473DE00E4E9BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -251,7 +425,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -300,7 +473,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -314,8 +486,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TR2QW27HUU;
 				INFOPLIST_FILE = "Tic-tac-toe/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dmytroplatov.tic-tac-toe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -330,8 +503,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TR2QW27HUU;
 				INFOPLIST_FILE = "Tic-tac-toe/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dmytroplatov.tic-tac-toe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -343,6 +517,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		32506CFC224547B5006C76E7 /* Build configuration list for PBXNativeTarget "ModelBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32506CFD224547B5006C76E7 /* Debug */,
+				32506CFE224547B5006C76E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A69D4DD71CE473DE00E4E9BC /* Build configuration list for PBXProject "Tic-tac-toe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
